@@ -660,7 +660,32 @@ void fillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, in
 void fillScreen(uint16_t color) {
     ST7735_FillRectangle(0, 0, _width, _height, color);
 }
+/************************ Icon function ************************************/
+void airPressureIcon(uint16_t x0, uint16_t y0)
+{
+	drawCircle(x0,y0,15,WHITE);
+	drawCircleHelper(x0,y0,12,3,WHITE);
+	
+	drawLine(x0-12,y0,x0-8,y0,WHITE);
+	drawLine(x0-8,y0-8,x0-5,y0-5,WHITE);
+	drawLine(x0,y0,x0,y0-8,WHITE);
+	drawLine(x0+8,y0-8,x0+5,y0-5,WHITE);
+	drawLine(x0+12,y0,x0+8,y0,WHITE);
+	drawLine(x0-3,y0+5,x0,y0-4,WHITE);
+	drawLine(x0+3,y0+5,x0,y0-4,WHITE);
+	drawLine(x0-3,y0+5,x0,y0+8,WHITE);
+	drawLine(x0+3,y0+5,x0,y0+8,WHITE);
+}
 
+void temperatureIcon(uint16_t x0, uint16_t y0)
+{
+	drawCircle(x0,y0,7,WHITE);
+	fillCircle(x0,y0,2,RED);
+	drawLine(x0-4,y0-5,x0-4,y0-28,WHITE);
+	drawLine(x0+4,y0-5,x0+4,y0-28,WHITE);
+	drawLine(x0,y0-7,x0,y0-25,RED);
+	drawCircleHelper(x0,y0-28,4,3,WHITE);
+}
 /************************ Test functions ***********************************/
 void testLines(uint16_t color)
 {

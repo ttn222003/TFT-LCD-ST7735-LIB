@@ -143,6 +143,9 @@ void fillRoundRect(int16_t x, int16_t y, int16_t w, int16_t h, int16_t r, uint16
 void drawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
 void fillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
 void fillScreen(uint16_t color);
+/************************** Icon functions ****************************/
+void airPressureIcon(uint16_t x0, uint16_t y0);
+void temperatureIcon(uint16_t x0, uint16_t y0);
 /********************* Test functions *********************************/
 void testLines(uint16_t color);
 void testFastLines(uint16_t color1, uint16_t color2);
